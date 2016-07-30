@@ -2,8 +2,8 @@
 set -x 
 ###################################################################################################
 #   This is reusable function for maven installation.
-#   The function expect one parameter - url maven
-#   binary. Example of usage: 
+#   The function expects one parameter - url of maven binary.
+#   Example of usage: 
 #   installMaven "http://apache.cbox.biz/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz"
 ###################################################################################################
 function installMaven {
@@ -20,7 +20,7 @@ function installMaven {
 		exit 1  
 	fi
     
-    mkdir -p $directoryName
+        mkdir -p $directoryName
 	cd $directoryName
 	wget $apacheMavenDownloadUrl
 	tar -zxf $resultFileName
